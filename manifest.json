@@ -1,0 +1,23 @@
+{
+	"name": "Chrome Tab Limitter Extension",
+	"version": "1.0",
+	"description": "This extension will allow you to set a limit to the amount of tabs you want openened and close the least recently opened tab upon reaching the limit.",
+	"permissions": ["storage", "tabs"],
+	"background": {
+		"scripts": ["scripts/background.js"],
+		"persistent": true
+	},
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"64": "assets/images/ico64.png",
+			"128": "assets/images/ico128.png"
+		}
+	},
+	"icons": {
+		"64": "assets/images/ico64.png",
+		"128": "assets/images/ico128.png"
+	},
+	"manifest_version": 2
+
+}
