@@ -1,0 +1,26 @@
+{
+  "name": "tabliminator",
+  "version": "1.0.0",
+  "description": "Chrome Extension for limiting the amount of tabs you can have opened at a time.",
+  "main": "index.js",
+  "dependencies": {
+    "commonjs": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.81",
+    "@types/node": "^11.11.6",
+    "copy-webpack-plugin": "^5.0.2",
+    "ts-loader": "~5.0.0",
+    "typescript": "~3.0.3",
+    "webpack": "~4.17.2",
+    "webpack-cli": "~3.1.0",
+    "webpack-merge": "~4.1.4"
+  },
+  "scripts": {
+    "watch": "webpack --config webpack/webpack.dev.js --watch",
+    "build": "webpack --config webpack/webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Wolfs",
+  "license": "MIT"
+}
