@@ -8,6 +8,7 @@ module.exports = {
         background: path.join(__dirname, '../src/scripts/background.ts'),
         settings: path.join(__dirname, '../src/scripts/settings.ts'),
         tabmanager: path.join(__dirname, '../src/scripts/tabmanager.ts'),
+        promisify: path.join(__dirname, '../src/scripts/promisify.ts'),
     },
     output: {
         path: path.join(__dirname, '../dist'),

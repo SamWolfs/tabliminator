@@ -6,17 +6,28 @@
 </head>
 
 <body>
-	<input id="maxTabs" type="number" min="1" />
-	<button id="setMaxTabs">Set Max</button>
-	
-	<script src="./scripts/popup.js"></script>
-</body>
+	<div class="container">
+		<div id="banner">
+			<h3>Tabliminator</h3>
+		</div>
 
-<footer>
-	<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a
-		href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
-		href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
-		BY</a></div>
-</footer>
+		<div class="form-container">
+			<input id="maxTabs" type="number" min="1" step="1" />
+			<button id="setMaxTabs">Set Max</button>
+			<p>Max Allowed Tabs: <span id="maxAllowedTabs"></span></p>
+			<p>Tabs Eliminated: <span id="tabsEliminated"></span></p>
+
+			<script src="./scripts/popup.js"></script>
+		</div>
+
+
+
+		<div class="footer">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a
+				href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+				href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC
+				3.0
+				BY</a></div>
+	</div>
+</body>
 
 </html>

@@ -1,4 +1,5 @@
 import Settings from './settings';
+import promisifiedGetTab from './promisify';
 
 const TabManager = {
     openedTabs: [],
@@ -9,7 +10,6 @@ const TabManager = {
     },
     addTab(tabId) {
         this.openedTabs = [...this.openedTabs, { id: tabId, lastActivated: new Date() }];
-        console.log(this.openedTabs);
     },
     updateLastActivated(tabId) {
         if (typeof tabId === 'number') {
@@ -30,12 +30,26 @@ const TabManager = {
         }
     },
     checkForRemoval() {
-        chrome.tabs.query({}, tabs => {
+        chrome.tabs.query({}, async tabs => {
             if (tabs.length > Settings.maxTabs) {
                 let snapshot = Object.assign([], this.openedTabs);
-                snapshot.sort((a, b) => b - a);
-                console.log(snapshot);
-                chrome.tabs.remove([snapshot[0].id]);
+                snapshot.sort((a, b) => a - b);
+                for (let i = 0; i < snapshot.length; i++) {
+                    const tab = await promisifiedGetTab(snapshot[i].id);
+                    if (!tab.pinned) {
+                        chrome.tabs.remove([tab.id]);
+                        return;
+                    }
+                }
+            }
+        });
+    },
+    updateEliminated() {
+        chrome.storage.sync.get(['tabsEliminated'], result => {
+            if (typeof result.tabsEliminated === 'number') {
+                chrome.storage.sync.set({ tabsEliminated: result.tabsEliminated + 1 })
+            } else {
+                chrome.storage.sync.set({ tabsEliminated: 1 })
             }
         });
     }

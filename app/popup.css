@@ -1,9 +1,62 @@
 body {
-    width: 250px;
-    height: 300px;
+    min-height: 300px;
+    min-width: 250px;
+    background-color: #202124;
 }
 
-footer {
-    position: absolute;
-    bottom: 5px;
+.footer {
+    height: auto;
+    background-color: rgb(85, 198, 214);
+}
+
+.container {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: space-between;
+}
+
+.container > * {
+    margin: 2px 0px;
+    padding: 5px;
+}
+
+.form-container {
+    background-color: rgb(85, 198, 214);
+    flex: 4;
+}
+
+#maxTabs {
+    padding: 10px 0px;
+    width: 45%;
+}
+
+button {
+    background-color: rgb(48, 85, 93);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 12px;
+    width: 45%;
+}
+
+#banner {
+    display: flex;
+    align-content: center;
+    font-size: 16px;
+    height: 30px;
+    color: whitesmoke;
+    align-content: center;
+    display: block;
+}
+
+h3 {
+    margin: 0px;
+    padding: 0px;
 }
