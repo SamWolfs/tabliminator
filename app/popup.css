@@ -22,13 +22,19 @@ body {
     padding: 5px;
 }
 
-.form-container {
+.main-section {
     background-color: rgb(85, 198, 214);
     flex: 4;
 }
 
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 #maxTabs {
-    padding: 10px 0px;
+    font-size: 12px;
+    padding: 10px 2px;
     width: 45%;
 }
 
@@ -59,4 +65,5 @@ button {
 h3 {
     margin: 0px;
     padding: 0px;
+    text-align: center;
 }

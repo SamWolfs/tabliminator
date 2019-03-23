@@ -38,6 +38,7 @@ const TabManager = {
                     const tab = await promisifiedGetTab(snapshot[i].id);
                     if (!tab.pinned) {
                         chrome.tabs.remove([tab.id]);
+                        this.updateEliminated();
                         return;
                     }
                 }
