@@ -9,5 +9,5 @@ whenever the limit is exceeded, the extension will close the least recently view
 1. Clone the repository.
 2. Run `npm i` to install the necessary dependencies.
 3. Run `npm run build` to compile to JavaScript and build the project.
-4. Navigate to the [Chrome Extensions Page](chrome://extensions/) and select *Load unpacked*.
+4. Navigate to the [chrome://extensions/](chrome://extensions/) Page and select *Load unpacked*.
 5. Select the project's *dist* folder. The Extension will be loaded into Chrome.
